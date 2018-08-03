@@ -3,7 +3,7 @@
 
 # node-vk-bot-api-session-redis
 
-Redis session middleware for [node-vk-bot-api](https://github.com/node-vk-bot-api/node-vk-bot-api).
+📄 Redis session middleware for [node-vk-bot-api](https://github.com/node-vk-bot-api/node-vk-bot-api).
 
 ## Install
 

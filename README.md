@@ -1,4 +1,4 @@
-[![node-vk-bot-api-session-redis](https://img.shields.io/npm/v/node-vk-bot-api.svg?style=flat-square)](https://www.npmjs.com/package/node-vk-bot-api-session-redis/)
+[![node-vk-bot-api-session-redis](https://img.shields.io/npm/v/node-vk-bot-api-session-redis.svg?style=flat-square)](https://www.npmjs.com/package/node-vk-bot-api-session-redis/)
 [![node-vk-bot-api-session-redis](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
 
 # node-vk-bot-api-session-redis

@@ -58,7 +58,7 @@ const getSessionKey = (ctx) => {
 }
 ````
 
-#### Clear session
+### Clear session
 
 ```js
 bot.on((ctx) => {

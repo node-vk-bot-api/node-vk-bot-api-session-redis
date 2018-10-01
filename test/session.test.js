@@ -17,8 +17,7 @@ describe('session', () => {
       ctx.session.user = user
 
       callback()
-      expect(ctx.session.user).to.be.a('object')
-      expect(ctx.session.user).to.eql(user)
+      expect(ctx.session.user).to.deep.equal(user)
     })
 
     await handleUpdate('/set')
@@ -31,8 +30,7 @@ describe('session', () => {
 
     bot.command('/get', (ctx) => {
       callback()
-      expect(ctx.session.user).to.be.a('object')
-      expect(ctx.session.user).to.eql(user)
+      expect(ctx.session.user).to.deep.equal(user)
     })
 
     await handleUpdate('/get')

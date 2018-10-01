@@ -25,10 +25,7 @@ $ npm test
 const VkBot = require('node-vk-bot-api')
 const RedisSession = require('node-vk-bot-api-session-redis')
 
-const bot = new VkBot({
-  token: process.env.TOKEN,
-  group_id: process.env.GROUP_ID
-})
+const bot = new VkBot(process.env.TOKEN)
 const session = new RedisSession()
 
 bot.use(session.middleware())
@@ -51,13 +48,21 @@ bot.startPolling()
 * `port`: Redis port (default: `6379`)
 * `password`: Redis password
 * `key`: Context property name (default: `session`)
-* `getSessionKey`: Getter for session key
+* `getSessionKey`: Method for get session key
+
+#### Clear session
+
+```js
+bot.on((ctx) => {
+  ctx.session = null
+})
+```
 
 #### Default `getSessionKey(ctx)`
 
 ```js
 const getSessionKey = (ctx) => {
- return `${ctx.message.from_id}:${ctx.message.from_id}` 
+  return `${ctx.message.from_id}:${ctx.message.from_id}` 
 }
 ````
 

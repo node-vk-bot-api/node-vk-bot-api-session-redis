@@ -5,6 +5,8 @@ const { bot, handleUpdate } = require('./config.test.js')
 
 const session = new RedisSession()
 
+const user = { name: 'bifot' }
+
 bot.use(session.middleware())
 
 describe('session', () => {
@@ -12,10 +14,10 @@ describe('session', () => {
     const callback = sinon.fake()
 
     bot.command('/set', (ctx) => {
-      ctx.session.user = { name: 'bifot' }
+      ctx.session.user = user
 
       callback()
-      expect(ctx.session.user).to.be.a('object')
+      expect(ctx.session.user).to.deep.equal(user)
     })
 
     await handleUpdate('/set')
@@ -28,7 +30,7 @@ describe('session', () => {
 
     bot.command('/get', (ctx) => {
       callback()
-      expect(ctx.session.user).to.be.a('object')
+      expect(ctx.session.user).to.deep.equal(user)
     })
 
     await handleUpdate('/get')

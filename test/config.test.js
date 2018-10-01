@@ -13,6 +13,6 @@ module.exports = {
       },
     })
 
-    setTimeout(resolve, 500)
+    setTimeout(resolve, 100)
   }),
 }

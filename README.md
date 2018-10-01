@@ -50,6 +50,14 @@ bot.startPolling()
 * `key`: Context property name (default: `session`)
 * `getSessionKey`: Method for get session key
 
+Default `getSessionKey`:
+
+```js
+const getSessionKey = (ctx) => {
+  return `${ctx.message.from_id}:${ctx.message.from_id}` 
+}
+````
+
 #### Clear session
 
 ```js
@@ -57,14 +65,6 @@ bot.on((ctx) => {
   ctx.session = null
 })
 ```
-
-#### Default `getSessionKey(ctx)`
-
-```js
-const getSessionKey = (ctx) => {
-  return `${ctx.message.from_id}:${ctx.message.from_id}` 
-}
-````
 
 ## License
 

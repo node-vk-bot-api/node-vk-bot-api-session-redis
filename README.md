@@ -49,6 +49,7 @@ bot.startPolling()
 
 * `host`: Redis host (default: `127.0.0.1`)
 * `port`: Redis port (default: `6379`)
+* `password`: Redis password
 * `key`: Context property name (default: `session`)
 * `getSessionKey`: Getter for session key
 

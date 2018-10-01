@@ -1,6 +1,6 @@
 {
   "name": "node-vk-bot-api-session-redis",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Redis session middleware for node-vk-bot-api",
   "main": "lib/session.js",
   "directories": {

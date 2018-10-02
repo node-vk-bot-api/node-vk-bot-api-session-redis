@@ -33,7 +33,6 @@ describe('session', () => {
     bot.command('/get', (ctx) => {
       callback()
       expect(ctx.session.user).to.deep.equal(user)
-      ctx.session = null
     })
 
     await handleUpdate('/get')

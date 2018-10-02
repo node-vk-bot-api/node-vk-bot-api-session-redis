@@ -33,6 +33,9 @@ describe('session', () => {
     bot.command('/get', (ctx) => {
       callback()
       expect(ctx.session.user).to.deep.equal(user)
+
+      // clear session for set inital data
+      ctx.session = null
     })
 
     await handleUpdate('/get')

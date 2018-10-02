@@ -14,6 +14,8 @@ describe('session', () => {
     const callback = sinon.fake()
 
     bot.command('/set', (ctx) => {
+      expect(ctx.session).to.deep.equal({})
+
       ctx.session.user = user
 
       callback()

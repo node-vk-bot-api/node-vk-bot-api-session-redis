@@ -54,8 +54,10 @@ Default `getSessionKey`:
 
 ```js
 const getSessionKey = (ctx) => {
-  return `${ctx.message.from_id}:${ctx.message.from_id}` 
-}
+  const userId = ctx.message.from_id || ctx.message.user_id;
+
+  return `${userId}:${userId}`;
+};
 ````
 
 ### Clear session
